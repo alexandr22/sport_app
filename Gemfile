@@ -10,6 +10,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'slim'
 # Регистрация
 gem 'devise'
+# Панель администратора
+gem 'activeadmin', github: 'activeadmin'
 
 gem 'jquery-rails'
 gem 'turbolinks'
