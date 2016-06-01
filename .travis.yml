@@ -1,5 +1,11 @@
 language: ruby
 rvm:
   - 2.3.1
+env:
+  - DB=postgresql
+script: 
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
 before_script:
   - psql -c "CREATE USER alexandr WITH PASSWORD 'qwerty22';" -U postgres
+  - psql -c "ALTER USER alexandr CREATEDB;" -U postgres
