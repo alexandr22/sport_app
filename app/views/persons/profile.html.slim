@@ -1,0 +1,21 @@
+- if @trainings.count > 0
+  h2 Список тренировок
+  - @trainings.each do |training|
+    h3= training.name
+    p= training.description
+    table.table
+      thead
+        tr
+          th Упражнение
+          th Описание
+          th Выполнений
+          th Подходов
+      tbody
+        - training.exercises.ordered.each do |exercise|
+          tr
+            td= exercise.name
+            td= exercise.description
+            td= exercise.quantity
+            td= exercise.attempt
+- else
+  h2 У Вас пока нет ни одной тренировки

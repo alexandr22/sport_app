@@ -5,6 +5,17 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style type="text/css">
+    body {
+      background: url(<%= asset_path('bg.jpeg') %>); 
+    }
+    #maincontent {
+      padding: 25px;
+      -webkit-box-shadow: 2px 2px 8px 0px rgba(50, 50, 50, 0.75);
+      -moz-box-shadow:    2px 2px 8px 0px rgba(50, 50, 50, 0.75);
+      box-shadow:         2px 2px 8px 0px rgba(50, 50, 50, 0.75);
+    }
+  </style>
 </head>
 <body>
 
@@ -14,7 +25,9 @@
   <div class="row">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div id="maincontent">
+      <%= yield %>
+    </div>
   </div>
 </div>
 
