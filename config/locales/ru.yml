@@ -44,7 +44,7 @@ ru:
       default: "%d.%m.%Y"
       long: "%-d %B %Y"
       short: "%-d %b"
-    month_names:
+    month_names: 
     -
     - января
     - февраля
@@ -62,3 +62,54 @@ ru:
     - :day
     - :month
     - :year
+
+  activerecord:
+    models:
+      admin_user:
+        one: Администратор
+        few: Администратора
+        many: Администраторов
+        other: Администраторы
+      exercise:
+        one: Упражнение
+        few: Упражнений
+        many: Упражнений
+        other: Упражнения
+      personal_training:
+        one: Тренировка
+        few: Тренировок
+        many: Тренировок
+        other: Тренировки
+      user:
+        one: Пользователь
+        few: Пользователя
+        many: Пользователей
+        other: Пользователи
+    attributes:
+      admin_user:
+        access_token: Ключ доступа
+        current_sign_in_at: Текущая сессия
+        last_sign_in_at: Последний визит
+        sign_in_count: Число входов
+      exercise:
+        name: Название
+        description: Описание
+        personal_training: Тренировка
+        attempt: Подходы
+        quantity: Количество выполнений
+        order_number_integer: Порядковый номер
+        created_at: Создано
+        updated_at: Обновлено
+      personal_training:
+        name: Название
+        description: Описание
+        user: Пользователь
+        updated_at: Обновлена
+        created_at: Создана
+      user:
+        password: Пароль
+        remember_me: Запомнить меня
+        current_sign_in_at: Текущая сессия
+        last_sign_in_at: Последний визит
+        created_at: Создан
+        updated_at: Обновлен

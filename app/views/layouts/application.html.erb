@@ -23,8 +23,10 @@
 
 <div class="container">
   <div class="row">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="container message">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
     <div id="maincontent">
       <%= yield %>
     </div>
