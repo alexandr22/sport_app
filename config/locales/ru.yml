@@ -80,6 +80,11 @@ ru:
         few: Тренировок
         many: Тренировок
         other: Тренировки
+      profile:
+        one: Профиль
+        few: Профиля
+        many: Профилей
+        other: Профили
       user:
         one: Пользователь
         few: Пользователя
@@ -106,6 +111,16 @@ ru:
         user: Пользователь
         updated_at: Обновлена
         created_at: Создана
+      profile:
+        name: Имя
+        weight: Вес
+        user: Пользователь
+        height: Рост
+        is_trainer: Тренер
+        allow_create_training: Возможность создавать тренировки
+        age: Возраст
+        stage: Стаж    
+        created_at: Создан
       user:
         password: Пароль
         remember_me: Запомнить меня

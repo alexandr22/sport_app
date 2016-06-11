@@ -1,4 +1,6 @@
 - if @trainings.count > 0
+  -if current_user.profile.try(:name)
+    h3= current_user.profile.name
   h2 Список тренировок
   - @trainings.each do |training|
     h3= training.name
@@ -12,7 +14,7 @@
           th Подходов
       tbody
         - training.exercises.ordered.each do |exercise|
-          tr
+          tr.active
             td= exercise.name
             td= exercise.description
             td= exercise.quantity

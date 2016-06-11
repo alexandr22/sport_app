@@ -7,13 +7,39 @@
   <%= csrf_meta_tags %>
   <style type="text/css">
     body {
-      background: url(<%= asset_path('bg.jpeg') %>); 
+      background: url(<%= asset_path('wp1.jpg') %>);
+      background-size: cover;
+      color: #ffffff;
+      font-size: 120%;
+      text-shadow: 1px 1px 2px black, 0 0 1em gray;
     }
     #maincontent {
       padding: 25px;
       -webkit-box-shadow: 2px 2px 8px 0px rgba(50, 50, 50, 0.75);
       -moz-box-shadow:    2px 2px 8px 0px rgba(50, 50, 50, 0.75);
       box-shadow:         2px 2px 8px 0px rgba(50, 50, 50, 0.75);
+    }
+    table {
+      color: #000000;
+      text-shadow: none;
+    }
+    .navbar-default .navbar-nav > li:not(:last-child) {
+      border-right:1px solid #ddd;
+     }
+
+    .navbar-default .navbar-nav > li:not(:first-child) {
+      border-left:1px solid #fff;
+     }
+
+    .navbar-inverse .navbar-nav > li:not(:last-child) {
+      border-right:1px solid #000;      
+     }
+
+    .navbar-inverse .navbar-nav > li:not(:first-child) {
+      border-left:1px solid #444;
+     }
+    .navbar-inverse a {
+      text-decoration: none !important;
     }
   </style>
 </head>

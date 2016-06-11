@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Allow create training:</strong>
+  <%= @profile.allow_create_training %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @profile.age %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @profile.user_id %>
+</p>
+
+<p>
+  <strong>Is trainer:</strong>
+  <%= @profile.is_trainer %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @profile.weight %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @profile.height %>
+</p>
+
+<p>
+  <strong>Stage:</strong>
+  <%= @profile.stage %>
+</p>
+
+<%= link_to 'Редактировать', edit_profile_path(@profile) %> |
+<%= link_to 'Назад', profiles_path %>
