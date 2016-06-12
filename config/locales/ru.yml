@@ -109,6 +109,7 @@ ru:
         name: Название
         description: Описание
         user: Пользователь
+        user_id: Пользователь
         updated_at: Обновлена
         created_at: Создана
       profile:

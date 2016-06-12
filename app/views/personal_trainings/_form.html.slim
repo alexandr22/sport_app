@@ -1,0 +1,22 @@
+= form_for(@personal_training) do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :user_id
+    = f.select :user_id, User.not_trainer.map{ |u| [ user_info(u), u.id ] }, {}, class: "form-control", style: 'width: 550px; display:inline;'
+  .field
+    = f.label 'День недели'
+    - daynames = {"Monday" => 'Понедельник', "Tuesday" => 'Вторник', "Wednesday" => 'Среда', "Thursday" => 'Четверг', "Friday" => 'Пятница', "Saturday" => 'Суббота', "Sunday" => 'Воскресенье'}
+    = f.select :weekday, daynames.map{ |k,v| [v, k]}, {}, class: "form-control", style: 'width: 550px; display:inline;'
+  .field
+    #exercises
+      = f.fields_for :exercises do |exercise|
+        = render 'exercise_fields', f: exercises 
+      .links
+        = link_to_add_association 'Добавить упражнение', f, :exercises
+  .actions
+    = f.submit

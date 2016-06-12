@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
+//= require cocoon
 //= require npm
 //= require turbolinks
 //= require_tree .

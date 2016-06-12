@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Тренировки</h1>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personal_trainings.each do |personal_training| %>
+      <tr class='active'>
+        <td><%= personal_training.user.profile.try(:name) %></td>
+        <td><%= link_to 'Показать', personal_training %></td>
+        <td><%= link_to 'Редактировать', edit_personal_training_path(personal_training) %></td>
+        <td><%= link_to 'Удалить', personal_training, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Новая тренировка', new_personal_training_path %>
