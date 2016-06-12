@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   has_many :personal_trainings
   has_one :profile
+
+  scope :not_trainer, ->{where(is_trainer: false)}
 end
