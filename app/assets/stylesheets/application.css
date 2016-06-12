@@ -19,3 +19,12 @@
 	margin-top: 45px;
 	padding: 5px;
 }
+label {
+  margin-right: 5px;
+}
+a {
+	color: #ffffff !important;
+}
+td a {
+	color: #000000 !important;
+}

@@ -7,5 +7,7 @@ class User < ActiveRecord::Base
   has_many :personal_trainings
   has_one :profile
 
-  scope :not_trainer, ->{where(is_trainer: false)}
+  def self.not_trainer
+    all.select{ |u| u.profile.try(:is_trainer) == false }
+  end
 end
