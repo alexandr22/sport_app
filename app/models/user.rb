@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   has_one :profile
 
   def self.not_trainer
-    all.select{ |u| u.profile.try(:is_trainer) == false }
+    all.select{ |u| u.profile.try(:is_trainer) == false || u.profile.try(:is_trainer) == nil }
   end
 end
