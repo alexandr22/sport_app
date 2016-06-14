@@ -1,4 +1,9 @@
 class PersonsController < ApplicationController
+  
+  def main
+
+  end
+
   def profile
   	puts current_user.profile.inspect
   	if current_user.profile.try(:id)
