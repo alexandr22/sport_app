@@ -7,14 +7,15 @@ nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
         - if current_user.try(:profile)
           li
             = link_to 'Профиль', profile_path(current_user.profile)
-          li
-            = link_to 'Выйти', destroy_user_session_path, :method => :delete
           - if current_user.profile.try(:is_trainer)
             li
               = link_to 'Управление тренировками', personal_trainings_path
           - else
             li
               = link_to 'Мои тренировки', persons_profile_path
+        - if current_user
+          li
+            = link_to 'Выйти', destroy_user_session_path, :method => :delete
         - else
           li
             = link_to 'Войти', new_user_session_path
