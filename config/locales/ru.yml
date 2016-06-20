@@ -124,6 +124,7 @@ ru:
         created_at: Создан
       user:
         password: Пароль
+        password_confirmation: Подтверждение пароля
         remember_me: Запомнить меня
         current_sign_in_at: Текущая сессия
         last_sign_in_at: Последний визит
