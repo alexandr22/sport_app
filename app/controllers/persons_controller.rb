@@ -1,7 +1,11 @@
 class PersonsController < ApplicationController
   
   def main
-
+    if current_user.profile
+      
+    else
+      redirect_to new_profile_path
+    end
   end
 
   def profile
